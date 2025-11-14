@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rock Paper scissors</title>
+</head>
+
+<body>
+    <h1>Rock Paper Scissors</h1>
+
+    <div id="sveOpcije">
+
+        <div class="opcija">
+            <img src="slike/Microsoft-Fluentui-Emoji-Flat-Rock-Flat.512.png">
+            <button class="dugme" onclick="playGame('rock')">Rock</button>
+        </div>
+
+        <div class="opcija">
+            <img src="slike/3731553.png">
+            <button class="dugme" onclick="playGame('paper')">Paper</button>
+        </div>
+
+        <div class="opcija">
+            <img src="slike/scissors-vxdqd78jhwojlpme4677j.webp">
+            <button class="dugme" onclick="playGame('scissors')">Scissors</button>
+        </div>
+
+    </div>
+    <p id="result"></p>
+    <p id="score"></p>
+    <script src="app.js"></script>
+</body>
+
+</html>
