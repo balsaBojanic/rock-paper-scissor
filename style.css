@@ -66,4 +66,37 @@ body {
     #score {
         font-size: 1rem;
     }
+
+    #game-counter {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    #computer-choice {
+        font-size: 1.3rem;
+        margin-top: 5px;
+        color: #555;
+    }
+
+    #round-result {
+        font-size: 1.8rem;
+        margin-top: 15px;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    #reset-button {
+        margin-top: 20px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 12px 25px;
+        font-size: 1.2rem;
+    }
+
+    #reset-button:hover {
+        background-color: #2980b9;
+    }
 }
