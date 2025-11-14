@@ -45,6 +45,49 @@ body {
     margin-top: 20px;
 }
 
+#game-counter {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#computer-choice {
+    font-size: 1.3rem;
+    margin-top: 5px;
+    color: #555;
+}
+
+#computer-choice-image {
+    margin-top: 10px;
+}
+
+#computer-choice-image img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+#round-result {
+    font-size: 1.8rem;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#reset-button {
+    margin-top: 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+}
+
+#reset-button:hover {
+    background-color: #2980b9;
+}
+
 @media (max-width: 480px) {
     #sveOpcije {
         gap: 15px;
@@ -67,36 +110,11 @@ body {
         font-size: 1rem;
     }
 
-    #game-counter {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-bottom: 10px;
+    #computer-choice-image img {
+        width: 80px;
+        height: 80px;
     }
 
-    #computer-choice {
-        font-size: 1.3rem;
-        margin-top: 5px;
-        color: #555;
-    }
 
-    #round-result {
-        font-size: 1.8rem;
-        margin-top: 15px;
-        font-weight: bold;
-        color: #2c3e50;
-    }
 
-    #reset-button {
-        margin-top: 20px;
-        background-color: #3498db;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 12px 25px;
-        font-size: 1.2rem;
-    }
-
-    #reset-button:hover {
-        background-color: #2980b9;
-    }
 }

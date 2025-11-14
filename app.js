@@ -24,12 +24,24 @@ function playRound(playerSelection, computerSelection) {
 }
 function playGame(playerChoice) {
     if (gamesPlayed >= gamesPerRound) {
-        return; 
+        return;
     }
     const computerChoice = computerPlay();
     const result = playRound(playerChoice, computerChoice);
     document.getElementById('result').textContent = result;
     document.getElementById('computer-choice').textContent = `Computer chose: ${computerChoice}`;
+    const computerImageContainer = document.getElementById('computer-choice-image');
+    computerImageContainer.innerHTML = '';
+    const img = document.createElement('img');
+    if (computerChoice === 'rock') {
+        img.src = 'https://github.com/balsaBojanic/rock-paper-scissor/blob/main/slike/Microsoft-Fluentui-Emoji-Flat-Rock-Flat.512.png?raw=true';
+    } else if (computerChoice === 'paper') {
+        img.src = 'https://github.com/balsaBojanic/rock-paper-scissor/blob/main/slike/3731553.png?raw=true';
+    } else if (computerChoice === 'scissors') {
+        img.src = 'https://github.com/balsaBojanic/rock-paper-scissor/blob/main/slike/scissors-vxdqd78jhwojlpme4677j.webp?raw=true';
+    }
+    img.alt = computerChoice;
+    computerImageContainer.appendChild(img);
     document.getElementById('score').textContent = `Player: ${playerScore} | Computer: ${computerScore}`;
     gamesPlayed++;
     document.getElementById('game-counter').textContent = `Game ${gamesPlayed} of ${gamesPerRound}`;
@@ -46,7 +58,7 @@ function endRound() {
     } else {
         roundResult = "The round ended in a tie!";
     }
-    
+
     document.getElementById('round-result').textContent = roundResult;
     document.getElementById('reset-button').style.display = 'block';
 }
@@ -55,11 +67,17 @@ function resetGame() {
     playerScore = 0;
     computerScore = 0;
     gamesPlayed = 0;
-    
+
     document.getElementById('result').textContent = "Make your choice to start the round!";
     document.getElementById('computer-choice').textContent = "";
+    document.getElementById('computer-choice-image').innerHTML = "";
     document.getElementById('score').textContent = "Player: 0 | Computer: 0";
     document.getElementById('game-counter').textContent = `Game 0 of ${gamesPerRound}`;
     document.getElementById('round-result').textContent = "";
     document.getElementById('reset-button').style.display = 'none';
 }
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('game-counter').textContent = `Game 0 of ${gamesPerRound}`;
+    document.getElementById('score').textContent = "Player: 0 | Computer: 0";
+    document.getElementById('result').textContent = "Make your choice to start the round!";
+});
